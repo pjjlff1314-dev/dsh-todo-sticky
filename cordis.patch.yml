@@ -1,0 +1,7 @@
+# dsh-todo-sticky 的 bundle patch：把宿主半 + 客户端半挂进 Web profile。
+#
+# 宿主半注册一个「不会被 turn/start 清空」的任务清单投影（todosSticky），
+# 客户端半在 conversation.input.dock（输入框上方那个位置）渲染常驻面板。
+- insert:
+    - id: todo-sticky
+      name: dsh-todo-sticky
