@@ -139,6 +139,16 @@ if (todos.length === 0) return null;               // ← 空就整个不渲染
 
 **开关**：设置 → 插件 → 找到 `dsh-todo-sticky` → 关掉即可（客户端面板与强制清单一起停）。也能在插件详情里单独移除。
 
+**方式一：装发行版压缩包**（不用 git）。到 [Releases](https://github.com/pjjlff1314-dev/dsh-todo-sticky/releases) 下载 `dsh-todo-sticky-<版本>.tgz`：
+
+```sh
+plugin_manager install_bundle  target=file:/absolute/path/to/dsh-todo-sticky-0.1.0.tgz
+```
+
+包内就是仓库里 `files` 字段列出的那几件（`lib/`、`cordis.patch.yml`、`README.md`、`LICENSE`、`package.json`），零依赖；`file:` 规格与 DSH 给 profile 写依赖时用的 `link:` / 版本号规格是同一条路子（pnpm 实测可直接安装本地 `.tgz`）。
+
+**方式二：源码直挂**（想改代码就用这个）：
+
 ```sh
 # 先把仓库克隆到本机任意位置，再源码直挂（路径按你的实际位置替换）
 git clone https://github.com/pjjlff1314-dev/dsh-todo-sticky.git
